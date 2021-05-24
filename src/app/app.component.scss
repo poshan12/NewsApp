@@ -1,0 +1,13 @@
+.active-link{
+    --ion-text-color:var(--ion-color-primary);
+    font-weight: bold;
+}
+ion-menu
+{
+    max-width: 300px;
+}
+ion-text{
+    margin-left: 12px;
+    font-size: 25px;
+    padding-left: 1px;
+}

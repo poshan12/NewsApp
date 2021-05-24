@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+       
+      </ion-menu-button>
+   
+  </ion-buttons>
+    <ion-title>
+      Source
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size=12 size-lg=3 size-md=4 size-sm=6 size-xs=12 *ngFor='let item of sources?.sources'>
+        <ion-list>
+          <ion-item color="light" href="/tabs/source/{{item.id}}">
+            <ion-label text-wrap>
+              <ion-text>
+                <h2>{{item.name}}</h2><ion-badge>{{item.category}}</ion-badge>
+              </ion-text>
+              <ion-text>
+                <p>{{item.description}}</p>
+              </ion-text>
+            </ion-label>
+            <ion-icon name="arrow-forward" slot="end"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>

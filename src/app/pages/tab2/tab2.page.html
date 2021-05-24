@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button>
+         
+        </ion-menu-button>
+     
+    </ion-buttons>
+      <ion-title>HeadLines</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-slides >
+            <ion-slide >
+                <ion-chip color="primary" class=""*ngFor="let item of category;" (click)="OnGetData(item)">
+                    <ion-label>{{item}}</ion-label>
+                  </ion-chip>
+            </ion-slide>
+            
+          </ion-slides>
+        
+
+      </ion-row>
+    </ion-grid>
+  </ion-content>

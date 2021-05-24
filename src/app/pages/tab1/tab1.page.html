@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+      
+      <ion-buttons slot="start">
+      <ion-menu-button>
+       
+      </ion-menu-button>
+    </ion-buttons>
+      <ion-title>homrtrte</ion-title>
+      
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size=12 size-lg=3 size-md=4 size-sm=6 size-xs=12 *ngFor='let item of new?.articles'>
+          <ion-card>
+            <ion-img *ngIf="item.urlToImage" [src]="item.urlToImage"></ion-img>
+            <ion-item>
+              <ion-icon name="calendar" slot="start"></ion-icon>
+              <ion-label>{{item.publishedAt | date:'medium'}}</ion-label>
+            </ion-item>
+  
+            <ion-spinner duration:10>
+            </ion-spinner>
+            <ion-card-content>
+              <ion-card-title>{{item.title}}</ion-card-title>
+              <p>{{item.description}}</p>
+            </ion-card-content>
+          
+  
+            <ion-item text-center>
+            <ion-label><i>{{item.source.name}}</i></ion-label>  
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+  </ion-content>
+  
