@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>City Wise Data </ion-title>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item >
+  <ion-label >Select Country</ion-label>
+  <ion-select [(ngModel)]="name" (ngModelChange)="SearchProduct(name)"> 
+    <ion-select-option value="{{item.country_code}}" *ngFor="let item of countries ">{{item.location}}</ion-select-option>
+  </ion-select>   
+</ion-item>
+
+
+<ion-list  *ngFor="let Prod of cityData">
+<ion-item >
+  <ion-label color="secondary" >Location:{{Prod.location}}</ion-label>
+  
+  </ion-item>
+  <ion-item>
+    <ion-label color="danger">Dead:{{Prod.dead}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label >Recovered:{{Prod.recovered}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Updated:{{Prod.updated |date}}</ion-label>
+        </ion-item>
+</ion-list>
+</ion-content>

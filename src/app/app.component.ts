@@ -11,6 +11,8 @@ export class AppComponent {
     { title: 'Home', url: 'tabs/tab1', icon: 'flash' },
     { title: 'Headlines', url: 'tabs/tab2', icon: 'globe' },
     { title: 'Source', url: 'tabs/tab3', icon: 'square' },
+    { title: 'Corona Track', url: 'corona', icon: 'search' },
+
 
     
     
